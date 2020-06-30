@@ -28,7 +28,7 @@ public class VerifyNewOrderCreation {
 		loginButton.click();
 				
 		//4. Click on Order link
-		
+		 
 		WebElement order = driver.findElement(By.linkText("Order"));
 		order.click();
 		
