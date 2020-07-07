@@ -25,7 +25,22 @@ public class UtilityClass {
 //			System.out.println(expectedText);
 			System.out.println("FAILED. Text: " + expectedText + " was not found on the page");
 			
+		}	
+	}
+	
+	
+	
+	public static List<Double> getDoubleMiles (List<String> sortedMiles) {	
+		List <Double> doubleMiles = new ArrayList<Double>();
+		for (String s: sortedMiles) {
+		s = s.substring(s.indexOf(' ')+1);
+		s = s.substring(0, s.indexOf(' '));
+		s = s.replaceAll(",", "");
+		double d = Double.parseDouble(s);
+		doubleMiles.add(d);
 		}
+		System.out.println(doubleMiles);
+		return doubleMiles;
 		
 	}
 
